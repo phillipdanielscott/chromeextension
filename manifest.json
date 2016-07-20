@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "trumptastic",
+  "description": "This extension replaces every use of the word \"Trump\" with \"man with the golden hair\"",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "8bit-gop-donald-trump.jpg",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["popup.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>trumptastic</title>
+    <style>
+      body {
+        font-size: 100%;
+      }
+      #status {
+        white-space: pre;
+        overflow: hidden;
+        max-width: 400px;
+      }
+    </style>
+
+
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <h1>hello!</h1>
+    <p>
+      this app replaces "trump" with "man with the golden hair"
+    </p>
+    <div id="status"></div>
+    <img id="image-result" hidden>
+  </body>
+</html>
